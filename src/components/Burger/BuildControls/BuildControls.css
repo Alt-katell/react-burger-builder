@@ -12,6 +12,8 @@
 
 .orderButton {
   background-color: #211D1E;
+  margin-top: 16px;
+  border: none;
   outline: none;
   cursor: pointer;
   color: #F5B515;
@@ -29,7 +31,7 @@
 .orderButton:disabled {
   background-color: #C7C6C6;
   cursor: not-allowed;
-  border: 1px solid #ccc;
+  border: 1px solid #C7C6C6;
   color: #888888;
 }
 

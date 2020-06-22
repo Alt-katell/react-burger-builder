@@ -46,7 +46,6 @@ export const auth = (email, password, isSignup) => {
       returnSecureToken: true
     }
     let apiKey = process.env.REACT_APP_FIREBASE_API
-    console.log(apiKey)
     let url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`;
     if (!isSignup) {
       url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`;

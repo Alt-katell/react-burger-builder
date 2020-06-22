@@ -45,9 +45,11 @@ export const auth = (email, password, isSignup) => {
       password: password,
       returnSecureToken: true
     }
-    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_FIREBASE_API}`;
+    let apiKey = process.env.REACT_APP_FIREBASE_API
+    console.log(apiKey)
+    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`;
     if (!isSignup) {
-      url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_FIREBASE_API}`;
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`;
     }
     axios.post(url, authData)
       .then(response => {
